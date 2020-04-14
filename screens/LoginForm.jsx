@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CLOSE_LOGIN_FORM } from "../state/actions/actionTypes";
+import { Overlay } from 'react-native-elements'
 import {
   Alert,
   Modal,
@@ -10,7 +11,7 @@ import {
   TextInput,
   View
 } from "react-native";
-import { onLogin, onLogout } from "../modules/authentication";
+import { onLogin } from "../modules/authentication";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -24,14 +25,18 @@ const LoginForm = () => {
   // };
 
   return (
-    <View>
+    <>
       {showLoginForm && (
-        <Modal
-          style={styles.formModal}
-          presentationStyle="FullScreen"
+        <Overlay
+          style={styles.formOverlay}
           animationType="fade"
-          transparent={false}
+          transparent={true}
           visible={true}
+          fullScreen={true}
+          windowBackgroundColor="rgba(255, 255, 255, .5)"
+          overlayBackgroundColor="red"
+          width="100%"
+          height="100%"
           onRequestClose={() => {
             Alert.alert("Modal has been closed.");
           }}
@@ -74,14 +79,14 @@ const LoginForm = () => {
               {loginMessage}
             </Text>
           </View>
-        </Modal>
+        </Overlay>
       )}
-    </View>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  formModal: {
+  formOverlay: {
     alignSelf: "center"
   },
   modalView: {
@@ -127,7 +132,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   buttonText: {
-    color: "#black",
+    color: "white",
     fontSize: 18,
     fontWeight: "500"
   }

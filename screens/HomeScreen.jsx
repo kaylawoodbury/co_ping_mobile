@@ -17,7 +17,7 @@ const HomeScreen = () => {
 
   return (
     <View>
-      <Text>{!authenticated && logoutMessage}</Text>
+      <Text style={styles.logoutMessage}>{!authenticated && logoutMessage}</Text>
       {authenticated && <TouchableHighlight style={styles.button} onPress={()=>onLogout(dispatch)}>
         <Text id="logout-button" style={styles.buttonText}>
           Logout
@@ -53,10 +53,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "#black",
+    color: "white",
     fontSize: 20,
     fontWeight: "600",
   },
+  logoutMessage: {
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 25,
+    color: "white"
+  }
 });
 
 export default HomeScreen;

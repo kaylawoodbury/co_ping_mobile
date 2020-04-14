@@ -8,6 +8,7 @@ import NewTripForm from "./screens/NewTripForm";
 import axios from "axios";
 import LoginForm from "./screens/LoginForm";
 import { LinearGradient } from 'expo-linear-gradient';
+import { Overlay } from "react-native-elements"
 axios.default.baseURL = "http://localhost:3000"
 // axios.defaults.baseURL = "https://co-ping.herokuapp.com";
 const styles = StyleSheet.create({
@@ -18,7 +19,8 @@ const styles = StyleSheet.create({
     width: 250,
     height: 100,
     alignSelf: "center",
-    margin: 20,
+    marginTop: 35,
+    marginBottom: 10
   },
 });
 const store = configureStore();
@@ -34,11 +36,12 @@ const App = () => {
           end={{ x: 1, y: 0 }}
         >
           <Image style={styles.logo} source={Logo} alt="Co-Ping logo" />
-          <HomeScreen />
+          <HomeScreen /> 
           <LoginForm />
           <NewTripForm />
         </LinearGradient>
       </View>
+     
     </Provider>
   );
 };
