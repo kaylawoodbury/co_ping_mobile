@@ -1,4 +1,4 @@
-import React from "react";
+import React, { setState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   View,
@@ -20,6 +20,11 @@ const TripsList = ({ navigation }) => {
   const newTrip = () => {
     dispatch({ type: NEW_TRIP_FORM });
   };
+  // const [ tripsDisplay ] = setState([])
+  // useEffect(() => {
+  //  {tripsDisplay}
+  // }, [])
+
   let tripsDisplay;
   if (Array.isArray(trips)) {
     tripsDisplay = trips;
