@@ -21,7 +21,7 @@ const RequestForm = () => {
   const [itemTwo, onChangeItemTwo] = useState("");
   const [itemThree, onChangeItemThree] = useState("");
 
-  let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"));
+  let headers = JSON.parse(AsyncStorage.getItem("J-tockAuth-Storage"));
   const sendRequest = async e => {
     e.preventDefault();
     let response = await axios.post(

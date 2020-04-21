@@ -28,7 +28,7 @@ const PongToPingDetails = (
   const dispatch = useDispatch()
   const [totalCost, setTotalCost] = useState()
 
-  let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"))
+  let headers = JSON.parse(AsyncStorage.getItem("J-tockAuth-Storage"))
   const sendCostInformation = async (event, pongId) => {
     event.preventDefault()
     let response = await axios.put(

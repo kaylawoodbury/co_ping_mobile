@@ -25,7 +25,7 @@ const NewTripForm = () => {
 
   const [timevalue, onChangeText] = React.useState("");
   const [storevalue, onChangeStore] = React.useState("");
-  let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"));
+  let headers = JSON.parse(AsyncStorage.getItem("J-tockAuth-Storage"));
   const createNewTrip = async e => {
     e.preventDefault();
     let response = await axios.post(

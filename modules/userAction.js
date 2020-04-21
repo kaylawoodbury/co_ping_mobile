@@ -9,7 +9,7 @@ const updateProfileInformation = async (
   userId,
   dispatch
 ) => {
-  let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"))
+  let headers = JSON.parse(AsyncStorage.getItem("J-tockAuth-Storage"))
   let response = await axios.put(
     `https://co-ping.herokuapp.com/profiles/${userId}`,
     {
@@ -37,7 +37,7 @@ const updateProfileInformation = async (
 }
 
 const getProfileInformation = async (userId, dispatch) => {
-  let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"))
+  let headers = JSON.parse(AsyncStorage.getItem("J-tockAuth-Storage"))
   let response = await axios.get(
     `https://co-ping.herokuapp.com/profiles/${userId}`,
     {
