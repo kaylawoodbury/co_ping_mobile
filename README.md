@@ -1,4 +1,4 @@
-# Co-Ping (mobile) [![Build Status](https://semaphoreci.com/api/v1/kaylawoodbury/co_ping_client-3/branches/development/badge.svg)](https://semaphoreci.com/kaylawoodbury/co_ping_client-3)
+# Co-Ping (mobile) 
 
 ![Co-Ping image](assets/images/copingWide.png)
 
