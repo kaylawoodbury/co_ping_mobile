@@ -16,7 +16,7 @@ const AddProfileImageButton = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableHighlight 
+      <TouchableHighlight
       // onPress={() => getPhotoFromGallery()}
       >
         <Image
@@ -56,31 +56,32 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "flex-end",
     alignSelf: "center",
-    width: 200, 
-    height: 200, 
+    width: 200,
+    height: 200,
     borderRadius: 200 / 2,
     backgroundColor: "#f0f4f7",
+    margin: 10,
     shadowOpacity: 0.5,
-    shadowRadius: 3,
+    shadowRadius: 2,
     shadowOffset: {
-    width: 0,
-    height: .5,
-  },
-  shadowColor: '#000000'
+      width: 0,
+      height: 0.25,
+    },
+    shadowColor: "#000000",
   },
   image: {
     justifyContent: "center",
     alignItems: "center",
-    width: 54, 
+    width: 54,
     height: 60,
     marginRight: 15,
     shadowOpacity: 0.5,
     shadowRadius: 1,
     shadowOffset: {
-    width: 0,
-    height: 1,
+      width: 0,
+      height: 1,
+    },
+    shadowColor: "#000000",
   },
-  shadowColor: '#000000'
-  }
 });
 export { AddProfileImageButton };

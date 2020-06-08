@@ -72,8 +72,8 @@ const UserProfile = () => {
             value={userName}
             onChangeText={(name) => onChangeName(name)}
           />
-          < AddProfileImageButton />
           <View style={styles.statusContainer}>{statusColor}</View>
+          < AddProfileImageButton />
           <View style={styles.itemContainer}>
             <Text style={styles.profileItem}>Phone: </Text>
             <TextInput
@@ -152,34 +152,63 @@ const styles = StyleSheet.create({
     margin: 15,
     borderRadius: 5,
     backgroundColor: "white",
-    shadowColor: "black",
-    shadowOpacity: 2.0,
+    shadowColor: "#134e5e",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
   },
   dataInput: {
     borderColor: "grey",
     width: 265,
+    padding: 5,
     fontWeight: "normal",
     fontFamily: "Futura-Medium",
     backgroundColor: "#f0f4f7",
     borderRadius: 5,
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    shadowOffset: {
+      width: 0,
+      height: 0.25,
+    },
+    shadowColor: "#000000"
   },
   dataInputText: {
     borderColor: "grey",
-    height: 90,
+    height: 100,
     width: 266,
+    padding: 5,
     fontWeight: "normal",
     fontFamily: "Futura-Medium",
     backgroundColor: "#f0f4f7",
     borderRadius: 5,
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    shadowOffset: {
+      width: 0,
+      height: 0.25,
+    },
+    shadowColor: "#000000"
   },
   dataInputAddress: {
     borderColor: "grey",
     height: 60,
     width: 250,
+    padding: 5,
     fontWeight: "normal",
     fontFamily: "Futura-Medium",
     backgroundColor: "#f0f4f7",
     borderRadius: 5,
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    shadowOffset: {
+      width: 0,
+      height: 0.25,
+    },
+    shadowColor: "#000000"
   },
   dataNameInput: {
     fontWeight: "bold",
@@ -187,9 +216,17 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: 20,
     margin: 5,
+    padding: 5,
     fontFamily: "Futura-Medium",
     backgroundColor: "#f0f4f7",
     borderRadius: 5,
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    shadowOffset: {
+      width: 0,
+      height: 0.25,
+    },
+    shadowColor: "#000000"
   },
   profileItem: {
     fontWeight: "bold",

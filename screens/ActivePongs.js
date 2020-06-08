@@ -71,9 +71,14 @@ const styles = StyleSheet.create({
     margin: 15,
     borderRadius: 5,
     backgroundColor: "white",
-    shadowColor: "black",
-    shadowOpacity: 2.0,
     height: 350,
+    shadowColor: "#134e5e",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
   },
   item: {
     fontSize: 18,

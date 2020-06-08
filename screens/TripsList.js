@@ -8,7 +8,6 @@ import {
   TouchableHighlight,
 } from "react-native";
 import { NEW_TRIP_FORM, SELECTED_TRIP_ID } from "../state/actions/actionTypes";
-
 import NewTripForm from "screens/NewTripForm";
 import { LinearGradient } from "expo-linear-gradient";
 
