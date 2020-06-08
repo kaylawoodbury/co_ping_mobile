@@ -9,6 +9,7 @@ import {
   TextInput,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { AddProfileImageButton } from "../components/AddImageButton";
 
 const UserProfile = () => {
   const dispatch = useDispatch();
@@ -71,6 +72,7 @@ const UserProfile = () => {
             value={userName}
             onChangeText={(name) => onChangeName(name)}
           />
+          < AddProfileImageButton />
           <View style={styles.statusContainer}>{statusColor}</View>
           <View style={styles.itemContainer}>
             <Text style={styles.profileItem}>Phone: </Text>
